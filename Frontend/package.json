@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "prodbuild": "npx parcel index.html"
   },
   "author": "Nikhil Arora",
   "license": "ISC",
