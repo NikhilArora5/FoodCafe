@@ -2,7 +2,7 @@ import React from 'react'
 import { createBrowserRouter,RouterProvider,Outlet} from "react-router-dom"
 import UserClass from './UserClass'
 import { Component } from 'react'
-import UserFunc from './userFunc'
+// import UserFunc from './userFunc'
 class About extends Component{
 
   constructor(props){
