@@ -1,0 +1,11 @@
+
+**/*.jpg
+**/*.JPEG
+**/*.pdf
+**/*.rar
+**/*.env
+
+node_modules
+.cache
+.parcel-cache
+dist
