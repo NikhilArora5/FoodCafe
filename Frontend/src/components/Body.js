@@ -6,6 +6,9 @@ import { Link } from "react-router-dom"
 import useOnlineStaus from "../utils/customHooks/useOnlineStatus"
 import RestaurantCardPromoted from "./RestaurantCardPromoted"
 import userContext from "../utils/context/userContext"
+import { RESTAURANTS_API } from "../utils/constants"
+// import axios from "axios";
+import axios from "axios"
 
 let RestaurantCardPromoted2=RestaurantCardPromoted(RestaurantCard)
 
@@ -32,7 +35,8 @@ const Body=()=>{
   
 
   const fetchData=async()=>{
-     let data=await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.6790976&lng=76.84398709999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+     let data=await fetch(RESTAURANTS_API)
+   
       const json=await data.json()
       console.log("----------Response---",json?.data?.cards.length)
       // console.log("----------Response---",json?.data?.cards[2])
