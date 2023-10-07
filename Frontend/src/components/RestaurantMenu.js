@@ -14,7 +14,7 @@ const RestaurantMenu = () => {
 
   const [showIndex,setShowIndex]=useState(0)
 
-  console.log('------------showIndexStat',showIndex)
+  // console.log('------------showIndexStat',showIndex)
 
 
   if (resInfo==null || resInfo.length==0) return <Shimmer></Shimmer>
