@@ -106,13 +106,13 @@ const Body = () => {
         </button>
       </div>
 
-      <input
+      {/* <input
         className="ml-4 p-2"
         type="text"
         placeholder="Context Name"
         onChange={(e) => setUserName(e.target.value)}
         value={loggedInUser}
-      />
+      /> */}
 
       <div className="res-container flex flex-wrap items-center ">
         {filteredRestData.map((rest) => (

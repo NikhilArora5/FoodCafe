@@ -40,8 +40,8 @@ const AppLayout = () => {
           setIsLoggedIn,
         }}
       >
-        <div className="root">
-          <Header />`<Outlet></Outlet>`
+        <div className="root bg-[#F5F5F5]">
+          <Header /><Outlet></Outlet>
         </div>
       </userContext.Provider>
     </Provider>
