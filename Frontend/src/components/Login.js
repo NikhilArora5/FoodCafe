@@ -1,10 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import { userLogin } from "../Api/auth";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate, useNavigate, Link } from "react-router-dom";
 import userContext from "../utils/context/userContext";
 import { useContext } from "react";
-import foodcafeLogin from "../assets/foodCafe1/1.png"
+import foodcafeLogin from "../assets/foodCafe1/1.png";
+
 const Login = () => {
   let navigate = useNavigate();
   const [email, SetEmail] = useState("");
@@ -37,7 +38,7 @@ const Login = () => {
     <div>
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <a className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-          <img className="w-[100px] mr-2" src={foodcafeLogin} alt="logo"/>
+          <img className="w-[100px] mr-2" src={foodcafeLogin} alt="logo" />
           Food Cafe
         </a>
         <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
@@ -74,12 +75,6 @@ const Login = () => {
               </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-start">
-                  {/* <div className="flex items-center h-5">
-                            <input  aria-describedby="remember" type="checkbox" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required=""/>
-                          </div> */}
-                  {/* <div className="ml-3 text-sm">
-                            <label  className="text-gray-500 dark:text-gray-300">Remember me</label>
-                          </div> */}
                   <div className="text-center">
                     <button
                       className="text-white bg-blue-400 p-2 px-4 rounded-md cursor-pointer mx-2"
@@ -89,12 +84,6 @@ const Login = () => {
                     </button>
                   </div>
                 </div>
-                <a
-                  href="#"
-                  className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500"
-                >
-                  Forgot password?
-                </a>
               </div>
 
               <button
@@ -105,12 +94,12 @@ const Login = () => {
               </button>
               <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                 Don’t have an account yet?{" "}
-                <a
-                  href="#"
+                <Link
+                  to={"/signup"}
                   className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                 >
                   Sign up
-                </a>
+                </Link>
               </p>
             </form>
           </div>

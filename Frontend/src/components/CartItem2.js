@@ -15,7 +15,7 @@ const CartItem2 = (props) => {
         <img
           src={CDN_URL + item?.imageId}
           alt="product-image"
-          className="w-20 rounded-lg "
+          className="w-16 rounded-lg "
         />
         <div className="sm:ml-4 sm:flex sm:w-full sm:justify-between">
           <div className="mt-5 sm:mt-0">

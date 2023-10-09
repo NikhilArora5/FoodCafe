@@ -17,6 +17,7 @@ import Demo from "./components/Demo";
 import CartItem2 from "./components/CartItem2";
 import PaymentSuccess from "./components/PaymentSuccess";
 import PaymetFailed from "./components/PaymetFailed";
+import Signup from "./components/Signup";
 
 const Grocery = lazy(() => import("./components/Grocery"));
 
@@ -100,6 +101,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/cart2",
         element: <CartItem2 />,
+      },
+      {
+        path: "/signup",
+        element:<Signup/>
       },
     ],
 

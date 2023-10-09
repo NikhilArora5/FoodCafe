@@ -101,11 +101,12 @@ let navigate = useNavigate();
               </button>
               <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                 ALready have an account {" "}
-                <a
-                  href="#"
+                <Link
+                  to={"/signup"}
                   className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                 >
-                  Login                </a>
+                  
+                </Link>
               </p>
             </form>
           </div>
@@ -113,7 +114,7 @@ let navigate = useNavigate();
       </div>
     </div>
   );
-  )
+  
 }
 
 export default Signup

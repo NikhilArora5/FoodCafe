@@ -38,7 +38,7 @@ const Cart = () => {
     );
   }
   return (
-    <div className="w-1/2 flex justify-around flex-col text-center mx-auto">
+    <div className="w-5/12 flex justify-around flex-col text-center mx-auto">
       <div className="flex flex-col ">
         <div>
           {cartItems.map((item) => (
