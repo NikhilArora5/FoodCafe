@@ -1,10 +1,10 @@
 import React from 'react'
 import { useState } from "react";
-import { userLogin } from "../Api/auth";
-import { Navigate, useNavigate } from "react-router-dom";
+import { userSignup } from "../Api/auth";
+import { Navigate, useNavigate ,Link} from "react-router-dom";
 import userContext from "../utils/context/userContext";
 import { useContext } from "react";
-import foodcafeLogin from "../assets/foodCafe1/1.png"
+import foodcafeLogin from "../assets/foodCafe1/editlogo.png";
 const Signup = () => {
   
 let navigate = useNavigate();
@@ -17,7 +17,7 @@ let navigate = useNavigate();
     // console.log("=========e",e)
     // setData({...data,[e.target.name]:e.target.value})
     e.preventDefault();
-    // userLogin(data)
+    // userSignup(data)
     let resData = await userLogin(data);
     console.log("resData", resData);
 
@@ -38,13 +38,14 @@ let navigate = useNavigate();
     <div>
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <a className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-          <img className="w-[100px] mr-2" src={foodcafeLogin} alt="logo"/>
+          
           Food Cafe
+          <img className="w-[100px] mr-2 mb-3" src={foodcafeLogin} alt="logo"/>
         </a>
         <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-              create  your account
+              Create  your account
             </h1>
             <form className="space-y-4 md:space-y-6">
               <div>
@@ -93,18 +94,14 @@ let navigate = useNavigate();
                 
               </div>
 
-              <button
-                type="submit"
-                className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-              >
-                Sign in
-              </button>
+             
               <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                ALready have an account {" "}
+                Already have an account ?  {" "}
                 <Link
                   to={"/signup"}
-                  className="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                  className="font-medium text-primary-600  dark:text-primary-500"
                 >
+                  <p>Login</p>
                   
                 </Link>
               </p>

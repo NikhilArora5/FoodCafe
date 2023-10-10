@@ -47,7 +47,7 @@ const Header = () => {
     }
   };
   return (
-    <div className="header flex bg-pink-50 px-6 pt-4 pb-0 items-start justify-between">
+    <div className="header flex bg-white px-6 pt-4 pb-0 items-start justify-between">
       <div className="logo-container flex items-center justify-evenly">
         {/* <img className="logo w-[130px] rounded-lg" src= {LOGO_URL}/> */}
         <img className="logo w-[150px] rounded-lg" src={foodcafe1} />
@@ -89,7 +89,7 @@ const Header = () => {
 
           {isLoggedIn ? <li className={li}>{loggedInUser}</li> : ""}
           <button
-            className="login-Btn bg-[#F5F5F5]  px-3 rounded-md"
+            // className="login-Btn bg-[#F5F5F5]  px-3 rounded-md"
             onClick={() => (isLoggedIn ? auth() : null)}
           >
             <Link to={isLoggedIn ? "/" : "/login"}>

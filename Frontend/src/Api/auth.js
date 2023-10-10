@@ -34,3 +34,20 @@ export const userLogout=async(data)=>{
     }
    
 }
+
+export const userSignup=async(data)=>{
+
+    try {
+        console.log("  API data  ",data)
+        let res=await axios.post(`${endPoint}/user/logout`,data)
+       
+        if(res) return res.data
+       
+    } catch (error) {
+        // console.log("--------ERROR-RES",error)
+        // console.log("-----------error",error.response.data.message)
+
+        return error.response.data
+    }
+   
+}

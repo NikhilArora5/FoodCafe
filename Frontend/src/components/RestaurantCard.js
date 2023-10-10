@@ -1,6 +1,6 @@
 import { CDN_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
-
+import { FaStar ,FaMotorcycle} from "react-icons/fa6";
 const RestaurantCard = (props) => {
   // const {name,cuisine,rating}=props
   // console.log("Props-------------",props)
@@ -13,11 +13,27 @@ const RestaurantCard = (props) => {
         src={CDN_URL + resData.cloudinaryImageId}
       />
       <h2 className="text-lg text-gray-800 font-bold">{resData.name}</h2>
+      <div className="flex items-center">
+        <span className=" bg-green-800 p-1 rounded-full mr-2">
+
+        <FaStar className="text-white"/>
+        </span>
+     
       <h4 className="text-gray-700">{resData.avgRatingString}</h4>
-      <h4 className="text-gray-500">{resData.cuisines.join(",")}</h4>
+      </div>
+    
+      <h4 className="text-gray-500">{resData.cuisines.length<5?resData.cuisines.join(","):resData.cuisines[0]}</h4>
 
       <h4 className="text-gray-500">{resData.costForTwo}</h4>
-      <h4 className="text-gray-500"> DeliveryTime:{resData.sla.slaString}</h4>
+      <div className="flex items-center">
+        <span className="mr-2 text-xl text-gray-600">
+
+        <FaMotorcycle/>
+        </span>
+     
+        <h4 className="text-gray-500"> :{resData.sla.slaString}</h4>
+      </div>
+     
     </div>
   );
 };
